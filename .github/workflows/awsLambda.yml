@@ -82,7 +82,7 @@ jobs:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ap-southeast-1 # TODO: AWS region to deploy to
-          function_name: # TODO: Name of the Lambda function to deploy to
+          function_name: Valorant_discord_bot # TODO: Name of the Lambda function to deploy to
           zip_file: bundle.zip
           environment: 
             APP_ID=${{ secrets.APP_ID }},
