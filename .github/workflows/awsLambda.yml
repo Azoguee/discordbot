@@ -20,7 +20,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: # TODO: AWS region to deploy to
+          aws-region: ap-southeast-1 # TODO: AWS region to deploy to
 
       - name: Setup Python 3.9
         uses: actions/setup-python@v1
@@ -29,11 +29,11 @@ jobs:
 
       - name: Upload Dependencies
         env:
-          release_bucket: # TODO: Name of the S3 bucket to upload the release to
-          release_bucket_uri: # TODO: URI of the S3 bucket to upload the release to
-          release_id: # TODO: Name of the release file
-          release_layer: # TODO: Name of the Lambda layer to upload the release to
-          function_name: # TODO: Name of the Lambda function to update
+          release_bucket: discordbotkyoxyz  # TODO: Name of the S3 bucket to upload the release to
+          release_bucket_uri: s3://discordbotkyoxyz # TODO: URI of the S3 bucket to upload the release to
+          release_id: bot.zip # TODO: Name of the release file
+          release_layer: bot # TODO: Name of the Lambda layer to upload the release to
+          function_name: Valorant_discord_bot # TODO: Name of the Lambda function to update
           APP_ID: ${{ secrets.APP_ID }}
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
@@ -81,7 +81,7 @@ jobs:
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: # TODO: AWS region to deploy to
+          aws_region: ap-southeast-1 # TODO: AWS region to deploy to
           function_name: # TODO: Name of the Lambda function to deploy to
           zip_file: bundle.zip
           environment: 
